@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGODB_URL).then(() => {
 var HashPass = ""
 // cors policy bypass
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: process.env.BASE_URL,
     credentials: true,
 }));
 
