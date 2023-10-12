@@ -1,0 +1,1 @@
+function s(i,n,c){const e=new Date;e.setTime(e.getTime()+c*24*60*60*1e3);const t="expires="+e.toUTCString();document.cookie=i+"="+n+"; "+t}function r(i){const n=i+"=",e=decodeURIComponent(document.cookie).split(";");for(let t=0;t<e.length;t++){let o=e[t];for(;o.charAt(0)===" ";)o=o.substring(1);if(o.indexOf(n)===0)return o.substring(n.length,o.length)}return""}export{r as g,s};
