@@ -11,7 +11,7 @@ const SignUpForm = () => {
     };
 
     const HandleSubmit = () => {
-        fetch("http://localhost:3000/SignUp", {
+        fetch("https://transfire.onrender.com/SignUp", {
             method: 'POST',
             body: JSON.stringify({
                 Name: name,

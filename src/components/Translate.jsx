@@ -56,7 +56,7 @@ const Translate = () => {
   useEffect(() => {
     // This useEffect will run whenever SavedWords changes
     if (SavedWords.length !== 0) {
-      fetch("http://localhost:3000/translate", {
+      fetch("https://transfire.onrender.com/translate", {
         method: 'POST',
         body: JSON.stringify({
           emailId: UserEmail || CookEmail,

@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { getCookie } from "./constants/Cookie"
 const About = () => {
   const UserEmail = getCookie("UserEmail")
-  console.log(UserEmail);
+  // console.log(UserEmail);
   const [DicArr, setDicArr] = useState([])
 
 
   useEffect(() => {
-    fetch("http://localhost:3000/About", {
+    fetch("https://transfire.onrender.com/About", {
       method: 'POST',
       body: JSON.stringify({
         emailId: UserEmail
