@@ -5,7 +5,6 @@ const app = express();
 const cors = require('cors')
 require("dotenv").config()
 // Dependencies imported
-// const Url = 'mongodb+srv://saprakaran001:Iamphenomenol1@transfirecluster.mlemikd.mongodb.net/?retryWrites=true&w=majority'
 // Connected to database
 mongoose.connect(process.env.MONGODB_URL).then(() => {
     console.log("Successfully Connected");
@@ -16,7 +15,7 @@ mongoose.connect(process.env.MONGODB_URL).then(() => {
 var HashPass = ""
 // cors policy bypass
 app.use(cors({
-    origin: process.env.BASE_URL,
+    origin: process.env.BASE_URL || "https://bespoke-cucurucho-c47ae0.netlify.app",
     credentials: true,
 }));
 
@@ -33,7 +32,7 @@ const NewUser = new mongoose.Schema({
 const New_User = mongoose.model('New_User', NewUser)
 app.post("/SignUp", async (req, res) => {
     const { Name, Email, Password } = req.body
-    console.log(Name, Email, Password);
+    // console.log(Name, Email, Password);
     HashPass = md5(md5(Password))
     console.log(typeof (HashPass));
     const New__User = new New_User({ Name, Email, Password: HashPass })
@@ -45,7 +44,7 @@ app.post("/Login", async (req, res) => {
     const { Name, Email, Password } = req.body
     // console.log(Name, Password);
     HashPass = md5(md5(Password))
-    console.log(typeof (HashPass));
+    // console.log(typeof (HashPass));
     New_User.findOne({ Email: Email })
         .then((docs) => {
             if (docs.Password === HashPass) {
@@ -58,7 +57,7 @@ app.post("/Login", async (req, res) => {
 })
 app.post("/translate", async (req, res) => {
     const { emailId, SavedWords } = req.body;
-    console.log(emailId, SavedWords);
+    // console.log(emailId, SavedWords);
 
     try {
         const docs = await New_User.findOne({ Email: emailId });
@@ -80,7 +79,7 @@ app.post("/translate", async (req, res) => {
 });
 app.post("/About", (req, res) => {
     const { emailId } = req.body;
-    console.log(emailId);
+    // console.log(emailId);
     New_User.findOne({ Email: emailId })
         .then((docs) => {
             return res.status(200).json({ message: docs })
