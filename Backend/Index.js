@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGODB_URL).then(() => {
 var HashPass = ""
 // cors policy bypass
 app.use(cors({
-    origin: process.env.BASE_URL || "https://bespoke-cucurucho-c47ae0.netlify.app",
+    origin: process.env.BASE_URL || "https://transfire.netlify.app/",
     credentials: true,
 }));
 
