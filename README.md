@@ -1,8 +1,10 @@
-# React + Vite
+# Transfire
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Introduction:-
+Transifre is a MERN stack project which has ability to translate more than 100+ problems without any latency.
+Its powered by ReactJs 💪 , Styled with tailwindcss and backend is powered by NodeJs , ExpressJs and MongoDB.
+Its completely responsive too.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features:-
+👉Users can make their accounts on this app and can translate languages and also can save special words too.
+👉This will help them to make their own dictionary too.
