@@ -1,7 +1,7 @@
 ## Introduction
 
 Introduction:-
-Transifre is a MERN stack project which has ability to translate more than 100+ problems without any latency.
+Transfire is a MERN stack project which has ability to translate more than 100+ problems without any latency.
 Its powered by ReactJs 💪 , Styled with tailwindcss and backend is powered by NodeJs , ExpressJs and MongoDB.
 Its completely responsive too.
  ---
