@@ -36,26 +36,20 @@
    ```bash
    git clone https://github.com/your-username/transfire.git
    ```
-
-2. Navigate to the project directory:
+2. Install dependencies for both frontend and backend:
    ```bash
-   cd transfire
+    npm install (Frontend)
+   cd ./backend && npm install
    ```
 
-3. Install dependencies for both frontend and backend:
-   ```bash
-   cd frontend && npm install
-   cd ../backend && npm install
-   ```
-
-4. Set up environment variables:
+3. Set up environment variables:
    - Create a `.env` file in the backend directory.
    - Add keys for the database connection, API keys (if any), and other configuration settings.
 
-5. Run the application:
+4. Run the application:
    - Start the backend:
      ```bash
-     npm start
+     npm run dev
      ```
    - Start the frontend:
      ```bash
